@@ -3,15 +3,18 @@
   margin: 0;
   padding: 0;
 }
+
 canvas {
   position: absolute;
   top: 0;
   left: 0;
 }
+
 body {
   background: #ffffff;
   overflow: hidden;
 }
+
 .container {
   color: rgba(55, 59, 65, 0.8);
   font-family: Helvetica, sans-serif;
@@ -22,6 +25,7 @@ body {
 h1 {
   font-weight: normal;
 }
+
 li {
   display: inline-block;
   font-size: 1.5em;
@@ -29,10 +33,12 @@ li {
   padding: 1em;
   text-transform: uppercase;
 }
+
 li span {
   display: block;
   font-size: 4.5rem;
 }
+
 .merrywrap {
   position: absolute;
   right: 40px;
@@ -40,26 +46,30 @@ li span {
   bottom: 80px;
   top: 40px;
 }
+
 .giftbox {
   position: absolute;
   width: 300px;
   height: 200px;
+  top: 50%;
   left: 50%;
   margin-left: -150px;
-  bottom: 0;
   z-index: 10;
 }
+
 .giftbox > div {
   background: #f64747;
   position: absolute;
   box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.4);
 }
+
 .giftbox > div:after,
 .giftbox > div:before {
   position: absolute;
   content: "";
   top: 0;
 }
+
 .giftbox:after {
   position: absolute;
   color: #fff;
@@ -72,6 +82,7 @@ li span {
   transform: rotate(-20deg);
   transform-origin: 0 0;
 }
+
 .giftbox .cover {
   width: 100%;
   top: 0;
@@ -79,6 +90,7 @@ li span {
   height: 25%;
   z-index: 2;
 }
+
 .giftbox .cover:before {
   position: absolute;
   height: 100%;
@@ -87,6 +99,7 @@ li span {
   transform: translateX(-50%);
   background: #2c3e50;
 }
+
 .giftbox .cover > div {
   position: absolute;
   width: 50px;
@@ -95,6 +108,7 @@ li span {
   top: -50px;
   transform: translateX(-50%);
 }
+
 .giftbox .cover > div:before,
 .giftbox .cover > div:after {
   position: absolute;
@@ -107,18 +121,22 @@ li span {
   border-radius: 30px;
   transform-origin: 50% 100%;
 }
+
 .giftbox .cover > div:before {
   transform: translateX(-45%) skewY(40deg);
 }
+
 .giftbox .cover > div:after {
   transform: translateX(45%) skewY(-40deg);
 }
+
 .giftbox .box {
   right: 5%;
   left: 5%;
   height: 80%;
   bottom: 0;
 }
+
 .giftbox .box:before {
   width: 50px;
   height: 100%;
@@ -126,38 +144,48 @@ li span {
   transform: translateX(-50%);
   background: #2c3e50;
 }
+
 .giftbox .box:after {
   width: 100%;
   height: 30px;
   background: rgba(0, 0, 0, 0);
 }
+
 .step-1 .giftbox {
   animation: wobble 0.5s linear infinite forwards;
 }
+
 .step-1 .cover {
   animation: wobble 0.5s linear infinite 5s forwards;
 }
+
 .step-1 .icons .row span {
   opacity: 1;
 }
+
 .step-2 .giftbox:after {
   opacity: 0;
 }
+
 .step-3 .giftbox,
 .step-4 .giftbox {
   opacity: 0;
   z-index: 1;
 }
+
 .step-3 .giftbox:after,
 .step-4 .giftbox:after {
   opacity: 0;
 }
+
 .step-2 .giftbox .cover {
   animation: flyUp 2s ease-in forwards;
 }
+
 .step-2 .giftbox .box {
   animation: flyDown 2s ease-in 0.05s forwards;
 }
+
 @keyframes wobble {
   25% {
     transform: rotate(4deg);
@@ -166,6 +194,7 @@ li span {
     transform: rotate(-2deg);
   }
 }
+
 @keyframes flyUp {
   75% {
     opacity: 1;
@@ -175,6 +204,7 @@ li span {
     opacity: 0;
   }
 }
+
 @keyframes flyDown {
   75% {
     opacity: 1;
@@ -184,13 +214,14 @@ li span {
     opacity: 0;
   }
 }
+
 footer {
   position: fixed;
   font-size: 20px;
   bottom: 0;
-  width: 85%;
-  height: 30px;
-  background-color: green;
+  width: 100%;
+  padding: 1em 2em;
+  background-color: black;
   color: white;
   text-align: center;
 }
